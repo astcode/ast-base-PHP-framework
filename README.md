@@ -27,32 +27,38 @@ The many features are:
 
         It is a smart framework because it can tell if you are working on a live server or localhost server or both.
 
-        To use it.
+--------------------------------------------------------------------------------------------------------------------
+To use it.
 
         First: must make the necessary changes to: core/global_config_variables.php
-    set the $file_root_document_folder to your base file name, it is it in the root directory then do not change it.
+        set the $file_root_document_folder to your base file name, it is it in the root directory then do not change it.
+        
         Second: Change the GLOBALS to fit your configuration:
-    ie…
-$GLOBALS['config'] = array(
-    'mysql_local' => array(
-        'host'      => 'localhost',
-        'username'  => 'root',
-        'password'  => '',
-        'db'        => 'ast_base_framework'
-    ),
-    'mysql_live' => array(
-        'host'      => 'localhost',
-        'username'  => 'mysql_username',
-        'password'  => 'mysql_password',
-        'db'        => 'mysql_database_name'
-    ),
+        ie…
+                $GLOBALS['config'] = array(
+                    'mysql_local' => array(
+                        'host'      => 'localhost',
+                        'username'  => 'root',
+                        'password'  => '',
+                        'db'        => 'ast_base_framework'
+                    ),
+                    'mysql_live' => array(
+                        'host'      => 'localhost',
+                        'username'  => 'mysql_username',
+                        'password'  => 'mysql_password',
+                        'db'        => 'mysql_database_name'
+                    ),
 
-Two more things in the GLOBALS can be changed.
-    1. cookie_expiry
-    2. csrf_protection to true or false.
+        Two more things in the GLOBALS can be changed.
+            1. cookie_expiry
+            2. csrf_protection to true or false.
 
-be careful changing anything else as I do not recommend changing anymore GLOBALS unless you know what you are doing.
+        be careful changing anything else as I do not recommend changing anymore GLOBALS unless you know what you are doing.
 
+        THIRD: create the database.  
+                then upload the ast_base_framework.sql to your mysql database
+                
+        Then you should be good to go...
 
 To add more functionality and or to lessen the footprint of the code open the  core/init.php
     There you can uncomment or comment out some functionality.  Only change the following.
