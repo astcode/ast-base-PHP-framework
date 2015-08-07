@@ -1,0 +1,1 @@
+<?php$user = new User();// initialize variables$username = "Guest";$session_flash = "";$hasPermission = "";$login_please = "";$error = NULL;
