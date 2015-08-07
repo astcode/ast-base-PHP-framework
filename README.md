@@ -63,6 +63,7 @@ To use:
 
 Get DB information
 
+```
 // EXAMPLE 1
 $user = new User();
 
@@ -119,3 +120,4 @@ $users = DB::getInstance()->get('users', array('id', '=', '1'));
 $users = DB::getInstance()->get('users', array('username', '=', 'admin'));
 
 $users = DB::getInstance()->get('users', array('joined', '>', '2012'));
+```
