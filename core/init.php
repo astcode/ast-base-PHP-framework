@@ -50,18 +50,27 @@ require_once BASE_FILE_CONFIG.'core/variables.php';
         // General functions ie.. getIp(), hasIpHit(), etc...
             require_once $basefileconfig.'functions/general.php';
 
-        // Function to format your date and time
-            // require_once $basefileconfig.'functions/date_time.php';
-
         // add ip_address to the global array.. may be overkill
         $GLOBALS['config']['site']['ip_address'] = getIp();
         $GLOBALS['config']['visitor']['ip_address'] = getIp();
+
+//----------------------------------------------------------------------------//
+//      The following can be commented or uncommented       //
+//----------------------------------------------------------------------------//
+        // Function to format your date and time
+            // require_once $basefileconfig.'functions/date_time.php';
 
         // Include Helpers
         // require_once $basefileconfig.'helpers/array_helper.php';
         // require_once $basefileconfig.'helpers/email_helper.php';
         // require_once $basefileconfig.'helpers/form_helper.php';
         // require_once $basefileconfig.'helpers/inflector_helper.php';
+
+//----------------------------------------------------------------------------//
+//      Do not change the following code                                   //
+//----------------------------------------------------------------------------//
+
+        // do NOT comment this one it is REQUIRED
         require_once $basefileconfig.'helpers/string_helper.php';
 
         //

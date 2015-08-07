@@ -13,7 +13,7 @@ class Form extends Input
      * @param  string $slug the single string
      * @return string       returns the $slug variable
      */
-	static function createSlug($slug){
+    static function createSlug($slug){
         // remove anything that isn't letters, numnber, spaces, hypens
         // remove spaces and duplicat hypens
         // trim left and right, removing any left overs hypens
